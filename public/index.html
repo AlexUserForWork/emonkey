@@ -192,11 +192,82 @@
                   }));
          })((window, document), window._wpemojiSettings);
       </script>
-	  <style>
-		.wanna-image {
-			transform: rotate(5deg);
-		}
-	  </style>
+      <style>
+         .wanna-image {
+            transform: rotate(5deg);
+         }
+
+         .tilt-animation {
+            display: inline-block;
+            animation: tilt 3s ease-in-out infinite;
+         }
+
+         .tilt-animation2 {
+            display: inline-block;
+            animation: tilt 4s ease-in-out infinite;
+            animation-delay: 1s;
+         }
+
+         .tilt-animation3 {
+            display: inline-block;
+            animation: tilt2 4s ease-in-out infinite;
+            animation-delay: 2s;
+         }
+
+         .zet {
+            position: relative;
+            z-index: 50;
+         }
+         .margin-hero {
+            margin-top: 10px !important;
+         }
+
+         .header-button {
+            color: #ffffff;
+            text-decoration: none;
+         }
+         .header-button:hover {
+            color: yellow !important;
+         }
+
+         @keyframes tilt {
+            0% {
+               transform: rotate(2deg);
+            }
+            4% {
+               transform: rotate(-2deg);
+            }
+            8% {
+               transform: rotate(2deg);
+            }
+            12% {
+               transform: rotate(0deg);
+            }
+
+            100% {
+               transform: rotate(0deg);
+            }
+         }
+
+         @keyframes tilt2 {
+            0% {
+               transform: rotate(-2deg);
+            }
+            4% {
+               transform: rotate(2deg);
+            }
+            8% {
+               transform: rotate(-2deg);
+            }
+            12% {
+               transform: rotate(0deg);
+            }
+
+            100% {
+               transform: rotate(0deg);
+            }
+         }
+      </style>
       <style id="cf-frontend-style-inline-css">
          @font-face {
             font-family: 'Obelix';
@@ -1286,6 +1357,12 @@
             width: auto;
             z-index: 100000;
          }
+
+         .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+         }
       </style>
       <link
          rel="stylesheet"
@@ -1525,8 +1602,9 @@
             data-element_type="container"
             id="floww"
          >
-            <div class="e-con-inner">
+            <div class="">
                <div
+                  id="HOME"
                   class="elementor-element elementor-element-8cf2d42 elementor-invisible elementor-widget elementor-widget-image"
                   data-id="8cf2d42"
                   data-element_type="widget"
@@ -1548,7 +1626,7 @@
             </div>
          </div>
          <div
-            class="elementor-element elementor-element-fe602a4 e-flex e-con-boxed e-con e-parent"
+            class="elementor-element elementor-element-fe602a4 e-flex e-con-boxed e-con e-parent zet"
             data-id="fe602a4"
             data-element_type="container"
             data-settings='{"background_background":"classic"}'
@@ -1599,7 +1677,7 @@
                   </div>
                </div>
                <div
-                  class="elementor-element elementor-element-b45531c e-con-full e-flex e-con e-child"
+                  class="elementor-element elementor-element-b45531c e-con-full e-flex e-con e-child zet"
                   data-id="b45531c"
                   data-element_type="container"
                >
@@ -1609,10 +1687,10 @@
                      data-element_type="widget"
                      data-widget_type="text-editor.default"
                   >
-                     <div class="elementor-widget-container">
+                     <div>
                         <p>
-                           <span style="color: #ffffff"
-                              ><a style="color: #ffffff" href="index.html#home"
+                           <span class="header-button" style="color: #ffffff"
+                              ><a class="header-button" href="index.html#home"
                                  >HOME</a
                               ></span
                            >
@@ -1627,8 +1705,10 @@
                   >
                      <div class="elementor-widget-container">
                         <p>
-                           <a href="index.html#about"
-                              ><span style="color: #ffffff">ABOUT</span></a
+                           <span class="header-button" style="color: #ffffff"
+                              ><a class="header-button" href="index.html#about"
+                                 >ABOUT</a
+                              ></span
                            >
                         </p>
                      </div>
@@ -1641,9 +1721,9 @@
                   >
                      <div class="elementor-widget-container">
                         <p>
-                           <span style="color: #ffffff"
+                           <span class="header-button" style="color: #ffffff"
                               ><a
-                                 style="color: #ffffff"
+                                 class="header-button"
                                  href="index.html#tokenomics"
                                  >TOKENOMICS</a
                               ></span
@@ -1658,7 +1738,13 @@
                      data-widget_type="text-editor.default"
                   >
                      <div class="elementor-widget-container">
-                        <p><span style="color: #ffffff">BUY</span></p>
+                        <p>
+                           <span class="header-button" style="color: #ffffff"
+                              ><a class="header-button" href="index.html#BUY"
+                                 >BUY</a
+                              ></span
+                           >
+                        </p>
                      </div>
                   </div>
                   <div
@@ -1691,7 +1777,8 @@
             </div>
          </div>
          <div
-            class="elementor-element elementor-element-bb0930c e-flex e-con-boxed e-con e-parent"
+            id="home"
+            class="elementor-element elementor-element-bb0930c e-flex e-con-boxed e-con e-parent margin-hero"
             data-id="bb0930c"
             data-element_type="container"
          >
@@ -1919,6 +2006,7 @@
             </div>
          </div>
          <div
+            id="about"
             class="elementor-element elementor-element-4afea6b about e-flex e-con-boxed e-con e-parent"
             data-id="4afea6b"
             data-element_type="container"
@@ -2006,6 +2094,24 @@
                         />
                      </div>
                   </div>
+                  <div
+                     class="elementor-element elementor-element-89fb192 elementor-invisible elementor-widget elementor-widget-image"
+                     data-id="89fb192"
+                     data-element_type="widget"
+                     data-settings='{"_animation":"fadeInRight"}'
+                     data-widget_type="image.default"
+                  >
+                     <div id="root"></div>
+                     <!-- <img
+                        loading="lazy"
+                        decoding="async"
+                        width="114"
+                        height="114"
+                        src="wp-content/uploads/2024/10/leaf1.gif"
+                        class="center-image"
+                        alt=""
+                     /> -->
+                  </div>
                </div>
             </div>
          </div>
@@ -2044,6 +2150,7 @@
          >
             <div class="e-con-inner">
                <div
+                  id="BUY"
                   class="elementor-element elementor-element-40c60f9 elementor-invisible elementor-widget elementor-widget-image"
                   data-id="40c60f9"
                   data-element_type="widget"
@@ -2065,6 +2172,7 @@
             </div>
          </div>
          <div
+            id="tokenomics"
             class="elementor-element elementor-element-1be815b tokenomics e-flex e-con-boxed e-con e-parent"
             data-id="1be815b"
             data-element_type="container"
@@ -2084,7 +2192,7 @@
                         width="1024"
                         height="173"
                         src="wp-content/uploads/2024/10/Group-34-1024x173.png"
-                        class="attachment-large size-large wp-image-196"
+                        class="attachment-large size-large wp-image-196 tilt-animation"
                         alt=""
                         srcset="
                            wp-content/uploads/2024/10/Group-34-1024x173.png 1024w,
@@ -2208,7 +2316,7 @@
                         width="2560"
                         height="908"
                         src="wp-content/uploads/2024/10/step1-1-scaled.webp"
-                        class="attachment-full size-full wp-image-49"
+                        class="attachment-full size-full wp-image-49 tilt-animation"
                         alt=""
                         srcset="
                            wp-content/uploads/2024/10/step1-1-scaled.webp   2560w,
@@ -2296,7 +2404,7 @@
                         width="2560"
                         height="846"
                         src="wp-content/uploads/2024/10/step2-scaled.webp"
-                        class="attachment-full size-full wp-image-22"
+                        class="attachment-full size-full wp-image-22 tilt-animation3"
                         alt=""
                         srcset="
                            wp-content/uploads/2024/10/step2-scaled.webp   2560w,
@@ -2384,7 +2492,7 @@
                         width="2560"
                         height="921"
                         src="wp-content/uploads/2024/10/step3-scaled.webp"
-                        class="attachment-full size-full wp-image-13"
+                        class="attachment-full size-full wp-image-13 tilt-animation2"
                         alt=""
                         srcset="
                            wp-content/uploads/2024/10/step3-scaled.webp   2560w,
@@ -2472,7 +2580,7 @@
                         width="2560"
                         height="898"
                         src="wp-content/uploads/2024/10/step4-scaled.webp"
-                        class="attachment-full size-full wp-image-15"
+                        class="attachment-full size-full wp-image-15 tilt-animation3"
                         alt=""
                         srcset="
                            wp-content/uploads/2024/10/step4-scaled.webp   2560w,
