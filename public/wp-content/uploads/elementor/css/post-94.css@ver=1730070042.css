@@ -1253,16 +1253,19 @@ body.elementor-page-94
    z-index: 10;
 }
 
-html {
-   /* box-sizing: border-box;
+/* body {
+   box-sizing: border-box;
    overflow-x: hidden;
-   width: 100%; */
-}
+   width: 100%;
+} */
 @media (max-width: 768px) {
    .contract-address {
       font-size: 10px;
    }
    .first-block {
       left: 0;
+   }
+   body {
+      overflow-x: hidden;
    }
 }
