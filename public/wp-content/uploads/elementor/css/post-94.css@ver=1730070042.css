@@ -1220,3 +1220,23 @@ body.elementor-page-94
    width: 960px;
    margin-bottom: 300px;
 }
+
+.bananas {
+   /* position: absolute;
+   width: 300%;
+   margin-left: 100px;
+   top: -200px;
+   left: 0; */
+   margin-left: 100px;
+}
+
+.m-top {
+   /* position: relative;
+   z-index: 20;
+   top: 200px;
+   margin-bottom: 500px; */
+}
+
+.z-10 {
+   z-index: 10;
+}
