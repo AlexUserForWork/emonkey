@@ -1261,6 +1261,15 @@ body.elementor-page-94
    overflow-x: hidden;
    width: 100%;
 } */
+
+.mobile-enable {
+   display: none;
+}
+
+.desktop-enable {
+   display: block !important;
+}
+
 @media (max-width: 768px) {
    .contract-address {
       font-size: 10px;
@@ -1270,5 +1279,12 @@ body.elementor-page-94
    }
    body {
       overflow-x: hidden;
+   }
+
+   .mobile-enable {
+      display: block;
+   }
+   .desktop-enable {
+      display: none !important;
    }
 }
