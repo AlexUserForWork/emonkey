@@ -1206,7 +1206,7 @@ body.elementor-page-94
 
 .contract-address {
    color: white;
-   font-size: 35px;
+   font-size: 25px;
    font-family: 'Obelix', sans-serif;
    max-width: 100%;
    overflow: hidden;
@@ -1237,9 +1237,12 @@ body.elementor-page-94
    left: 0; */
    /* margin-left: 100px; */
    position: relative;
-   left: 100px;
-   width: 300%;
+   /* right: -400px; */
+   width: 2540px !important;
+   min-width: 2540px;
    transform: translate(-10%, -10%);
+   height: 500px;
+   box-sizing: content-box;
 }
 
 .m-top {
