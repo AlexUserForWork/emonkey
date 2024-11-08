@@ -1208,12 +1208,20 @@ body.elementor-page-94
    color: white;
    font-size: 35px;
    font-family: 'Obelix', sans-serif;
+   max-width: 100%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
 .contract-id {
    text-transform: none;
    cursor: pointer;
    color: #1d7595;
+   max-width: 100%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
 .banana {
@@ -1239,4 +1247,18 @@ body.elementor-page-94
 
 .z-10 {
    z-index: 10;
+}
+
+html {
+   box-sizing: border-box;
+   overflow-x: hidden;
+   width: 100%;
+}
+@media (max-width: 768px) {
+   .contract-address {
+      font-size: 10px;
+   }
+   .first-block {
+      left: 0;
+   }
 }
